@@ -23,7 +23,7 @@ public interface ProporcionRepository extends JpaRepository<Proporcion, Integer>
 		
 	}
 
-	@Query("select p from Proporcion p wher p.idArquetipo=:idArquetipo and p.idMetajuego=:idMetajuego")
+	@Query("select p from Proporcion p where p.idArquetipo=:idArquetipo and p.idMetajuego=:idMetajuego")
 	public Proporcion getProporcionByIdMetajuegoIdArquetipo( @Param("idMetajuego")Integer idMetajuego,
 			@Param("idArquetipo")Integer idArquetipo);
 
