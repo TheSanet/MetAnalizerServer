@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://metanalizer.jsanz.com/request/respuesta/simple"
+	xmlns:entity="http://metanalizer.jsanz.com/ws/entity"
+	targetNamespace="http://metanalizer.jsanz.com/ws/entity"
+	elementFormDefault="qualified">
+
+	<xs:include  schemaLocation="Formato.xsd" />
+	<xs:include schemaLocation="MetajuegoSimple.xsd" />
+
+	<xs:complexType name="ConsultaSimpleResponse">
+		<xs:sequence>
+			<xs:element name="data" type="entity:simplestMetajuego" />
+			<xs:element name="formato" type="entity:format" />
+			<xs:element name="fecha-inicio" type="xs:date" nillable="true" />
+			<xs:element name="fecha-fin" type="xs:date" nillable="true" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

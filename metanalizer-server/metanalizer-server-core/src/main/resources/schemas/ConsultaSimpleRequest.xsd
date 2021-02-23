@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://metanalizer.jsanz.com/request/consulta/simple"
+	xmlns:entity="http://metanalizer.jsanz.com/ws/entity"
+	targetNamespace="http://metanalizer.jsanz.com/ws/entity">
+
+	<xs:include schemaLocation="Formato.xsd" />
+
+	<xs:complexType name="ConsultaSimpleRequest">
+		<xs:sequence>
+			<xs:element name="formato" type="entity:format" />
+			<xs:element name="fecha-inicio" type="xs:date" nillable="true"/>
+			<xs:element name="fecha-fin" type="xs:date"  nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

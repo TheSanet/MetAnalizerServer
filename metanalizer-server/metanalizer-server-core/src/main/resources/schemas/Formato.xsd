@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://metanalizer.jsanz.com/entity" targetNamespace="http://metanalizer.jsanz.com/ws/entity">
+
+	<xs:complexType name="format">
+		<xs:sequence>
+			<xs:element name="nombre" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
