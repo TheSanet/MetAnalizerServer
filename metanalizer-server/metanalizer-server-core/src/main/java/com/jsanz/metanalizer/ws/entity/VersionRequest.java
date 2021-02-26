@@ -17,17 +17,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Clase Java para ConsultaSimpleResponse complex type.
+ * <p>Clase Java para VersionRequest complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="ConsultaSimpleResponse"&gt;
+ * &lt;complexType name="VersionRequest"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="data" type="{http://metanalizer.jsanz.com/ws/entity}simplestMetajuego"/&gt;
- *         &lt;element name="formato" type="{http://metanalizer.jsanz.com/ws/entity}format"/&gt;
  *         &lt;element name="fecha-inicio" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="fecha-fin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *       &lt;/sequence&gt;
@@ -39,72 +37,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConsultaSimpleResponse", propOrder = {
-    "data",
-    "formato",
+@XmlType(name = "VersionRequest", propOrder = {
     "fechaInicio",
     "fechaFin"
 })
-public class ConsultaSimpleResponse {
+public class VersionRequest {
 
-    @XmlElement(namespace = "http://metanalizer.jsanz.com/ws/entity", required = true)
-    protected SimplestMetajuego data;
-    @XmlElement(namespace = "http://metanalizer.jsanz.com/ws/entity", required = true)
-    protected Format formato;
-    @XmlElement(name = "fecha-inicio", namespace = "http://metanalizer.jsanz.com/ws/entity", required = true, nillable = true)
+    @XmlElement(name = "fecha-inicio", required = true, nillable = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fechaInicio;
-    @XmlElement(name = "fecha-fin", namespace = "http://metanalizer.jsanz.com/ws/entity", required = true, nillable = true)
+    @XmlElement(name = "fecha-fin", required = true, nillable = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fechaFin;
-
-    /**
-     * Obtiene el valor de la propiedad data.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SimplestMetajuego }
-     *     
-     */
-    public SimplestMetajuego getData() {
-        return data;
-    }
-
-    /**
-     * Define el valor de la propiedad data.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SimplestMetajuego }
-     *     
-     */
-    public void setData(SimplestMetajuego value) {
-        this.data = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad formato.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Format }
-     *     
-     */
-    public Format getFormato() {
-        return formato;
-    }
-
-    /**
-     * Define el valor de la propiedad formato.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Format }
-     *     
-     */
-    public void setFormato(Format value) {
-        this.formato = value;
-    }
 
     /**
      * Obtiene el valor de la propiedad fechaInicio.

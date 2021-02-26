@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://metanalizer.jsanz.com/version/request"
+	targetNamespace="http://metanalizer.jsanz.com/version/request">
+
+	<xs:complexType name="VersionRequest">
+		<xs:sequence>
+			<xs:element name="fecha-inicio" type="xs:date" nillable="true"/>
+			<xs:element name="fecha-fin" type="xs:date"  nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

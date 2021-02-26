@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://metanalizer.jsanz.com/version"
+	targetNamespace="http://metanalizer.jsanz.com/version"
+	elementFormDefault="qualified" 
+	attributeFormDefault="qualified">
+	
+	<xsd:import namespace="http://metanalizer.jsanz.com/version/request" schemaLocation="VersionRequest.xsd"></xsd:import>
+	<xsd:import namespace="http://metanalizer.jsanz.com/version/response" schemaLocation="VersionResponse.xsd"></xsd:import>
+	
+</xsd:schema>

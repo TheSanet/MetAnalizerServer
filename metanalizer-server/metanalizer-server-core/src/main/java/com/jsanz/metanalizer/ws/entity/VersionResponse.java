@@ -17,17 +17,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Clase Java para ConsultaSimpleResponse complex type.
+ * <p>Clase Java para VersionResponse complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="ConsultaSimpleResponse"&gt;
+ * &lt;complexType name="VersionResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="data" type="{http://metanalizer.jsanz.com/ws/entity}simplestMetajuego"/&gt;
- *         &lt;element name="formato" type="{http://metanalizer.jsanz.com/ws/entity}format"/&gt;
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="fecha-inicio" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="fecha-fin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *       &lt;/sequence&gt;
@@ -39,18 +38,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConsultaSimpleResponse", propOrder = {
-    "data",
-    "formato",
+@XmlType(name = "VersionResponse", propOrder = {
+    "version",
     "fechaInicio",
     "fechaFin"
 })
-public class ConsultaSimpleResponse {
+public class VersionResponse {
 
     @XmlElement(namespace = "http://metanalizer.jsanz.com/ws/entity", required = true)
-    protected SimplestMetajuego data;
-    @XmlElement(namespace = "http://metanalizer.jsanz.com/ws/entity", required = true)
-    protected Format formato;
+    protected String version;
     @XmlElement(name = "fecha-inicio", namespace = "http://metanalizer.jsanz.com/ws/entity", required = true, nillable = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fechaInicio;
@@ -59,51 +55,27 @@ public class ConsultaSimpleResponse {
     protected XMLGregorianCalendar fechaFin;
 
     /**
-     * Obtiene el valor de la propiedad data.
+     * Obtiene el valor de la propiedad version.
      * 
      * @return
      *     possible object is
-     *     {@link SimplestMetajuego }
+     *     {@link String }
      *     
      */
-    public SimplestMetajuego getData() {
-        return data;
+    public String getVersion() {
+        return version;
     }
 
     /**
-     * Define el valor de la propiedad data.
+     * Define el valor de la propiedad version.
      * 
      * @param value
      *     allowed object is
-     *     {@link SimplestMetajuego }
+     *     {@link String }
      *     
      */
-    public void setData(SimplestMetajuego value) {
-        this.data = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad formato.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Format }
-     *     
-     */
-    public Format getFormato() {
-        return formato;
-    }
-
-    /**
-     * Define el valor de la propiedad formato.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Format }
-     *     
-     */
-    public void setFormato(Format value) {
-        this.formato = value;
+    public void setVersion(String value) {
+        this.version = value;
     }
 
     /**

@@ -10,9 +10,49 @@
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<spring-ws.version>3.0.7.RELEASE</spring-ws.version>
+		<spring.profiles.active>DEV</spring.profiles.active>
+		<wsdl4j.version>1.6.3</wsdl4j.version>
 	</properties>
+	
+	<build>
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>*.properties</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
 
 	<dependencies>
+	
+		<!-- Spring security -->
+		<dependency>
+		    <groupId>org.springframework.ws</groupId>
+		    <artifactId>spring-ws-security</artifactId>
+		    <version>${spring-ws.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-tx</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
 
 		<!-- xsd -->
 		<dependency>
@@ -95,6 +135,19 @@
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>javax.servlet-api</artifactId>
 		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
 		</dependency>
 
 
