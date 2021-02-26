@@ -17,6 +17,8 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.ws.transport.http.support.AbstractAnnotationConfigMessageDispatcherServletInitializer;
 
+import com.jsanz.metanalizer.core.config.DatabaseConfig;
+
 /**
  * ConfiguraciÃ³n DispatcherServlet.
  * 
@@ -39,7 +41,7 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigMessageDisp
 	
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] {  WebServiceConfiguration.class };
+		return new Class[] {  WebServiceConfiguration.class, DatabaseConfig.class };
 	}
 
 	@Override
@@ -47,19 +49,6 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigMessageDisp
 		return null;
 	}
 
-	@Override
-	protected void customizeRegistration(Dynamic registration) {
-		registration.setMultipartConfig(getMultiPartConfig());
-		super.customizeRegistration(registration);
-	}
-
-	private MultipartConfigElement getMultiPartConfig() {
-		String location = "";
-		long maxFileSize = 5L * 1024L * 1024L;
-		long maxRequestSize = 10L * 1024L * 1024L;
-		int fileSizeThreshold = 0;
-		return new MultipartConfigElement(location, maxFileSize, maxRequestSize, fileSizeThreshold);
-	}
 	
 	@Override
 	public void onStartup(ServletContext servletContext_) throws ServletException {

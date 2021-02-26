@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.02.25 a las 12:37:32 PM CET 
+// Generado el: 2021.02.26 a las 02:27:32 PM CET 
 //
 
 
@@ -74,22 +74,6 @@ public class ObjectFactory {
      */
     public ConsultaSimpleResponse createConsultaSimpleResponse() {
         return new ConsultaSimpleResponse();
-    }
-
-    /**
-     * Create an instance of {@link VersionRequest }
-     * 
-     */
-    public VersionRequest createVersionRequest() {
-        return new VersionRequest();
-    }
-
-    /**
-     * Create an instance of {@link VersionResponse }
-     * 
-     */
-    public VersionResponse createVersionResponse() {
-        return new VersionResponse();
     }
 
     /**

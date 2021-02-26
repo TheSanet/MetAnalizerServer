@@ -5,5 +5,5 @@
 // Generado el: 2021.02.26 a las 02:27:32 PM CET 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://metanalizer.jsanz.com/ws/entity")
-package com.jsanz.metanalizer.ws.entity;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://metanalizer.jsanz.com/version", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.jsanz.metanalizer.version;
