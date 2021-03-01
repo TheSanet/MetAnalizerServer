@@ -1,6 +1,7 @@
 package com.jsanz.metanalizer.core.entity;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -77,7 +78,10 @@ public class Metajuego implements Serializable {
 	}
 
 	public LocalDate getFechaAlta() {
-		return fechaAlta.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+//		return fechaAlta.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		return Instant.ofEpochMilli(fechaAlta.getTime())
+			      .atZone(ZoneId.systemDefault())
+			      .toLocalDate();
 	}
 
 	public void setFechaAlta(LocalDate fechaAlta) {
@@ -85,7 +89,10 @@ public class Metajuego implements Serializable {
 	}
 
 	public LocalDate getFechaDesde() {
-		return fechaDesde.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+//		return fechaDesde.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		return Instant.ofEpochMilli(fechaDesde.getTime())
+			      .atZone(ZoneId.systemDefault())
+			      .toLocalDate();
 	}
 
 	public void setFechaDesde(LocalDate fechaDesde) {
@@ -93,7 +100,10 @@ public class Metajuego implements Serializable {
 	}
 
 	public LocalDate getFechaHasta() {
-		return fechaHasta.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+//		return fechaHasta.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		return Instant.ofEpochMilli(fechaHasta.getTime())
+			      .atZone(ZoneId.systemDefault())
+			      .toLocalDate();
 	}
 
 	public void setFechaHasta(LocalDate fechaHasta) {

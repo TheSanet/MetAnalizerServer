@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://metanalizer.jsanz.com/version" targetNamespace="http://metanalizer.jsanz.com/version" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="http://metanalizer.jsanz.com" 
+targetNamespace="http://metanalizer.jsanz.com">
 
 
 		<xs:element name="VersionRequest">

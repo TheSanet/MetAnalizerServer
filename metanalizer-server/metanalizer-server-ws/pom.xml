@@ -60,6 +60,13 @@
 			<artifactId>metanalizer-server-core</artifactId>
 			<version>1.0</version>
 		</dependency>
+		
+		<!-- para que spring ws resuelva los includes -->
+	<dependency>
+        <groupId>org.apache.ws.xmlschema</groupId>
+        <artifactId>xmlschema-core</artifactId>
+        <version>2.2.1</version>
+    </dependency>
 
 		<!-- ddbb -->
 		<dependency>

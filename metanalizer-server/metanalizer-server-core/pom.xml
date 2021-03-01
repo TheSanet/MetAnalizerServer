@@ -16,34 +16,38 @@
     </dependency>
 	</dependencies>
 
-<build>
-<plugins>
-<plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>jaxb2-maven-plugin</artifactId>
-    <version>2.3</version>
-    <executions>
-        <execution>
-            <id>xjc</id>
-            <goals>
-                <goal>xjc</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-        <sources>
-            <source>src/main/resources/schemas</source>
-        </sources>
-        <outputDirectory>${basedir}/src/main/java</outputDirectory>
-        <clearOutputDir>true</clearOutputDir>
-         <args>
-                    <arg>-XtoString</arg>
-                    <arg>-Xequals</arg>
-                    <arg>-XhashCode</arg>
-                    </args>
-    </configuration>
-</plugin>
-</plugins>
+<!-- <build> -->
+<!-- <plugins> -->
+<!-- <plugin> -->
+<!--     <groupId>org.codehaus.mojo</groupId> -->
+<!--     <artifactId>jaxb2-maven-plugin</artifactId> -->
+<!--     <version>2.3</version> -->
+<!--     <executions> -->
+<!--         <execution> -->
+<!--             <id>xjc</id> -->
+<!--             <goals> -->
+<!--                 <goal>xjc</goal> -->
+<!--             </goals> -->
+<!--         </execution> -->
+<!--     </executions> -->
+<!--     <configuration> -->
+<!--         <sources> -->
+<!--             <source>src/main/resources/schemas/ArquetipoSimple.xsd</source> -->
+<!--             <source>src/main/resources/schemas/ConsultaSimpleRequest.xsd</source> -->
+<!--             <source>src/main/resources/schemas/ConsultaSimpleResponse.xsd</source> -->
+<!--             <source>src/main/resources/schemas/Formato.xsd</source> -->
+<!--             <source>src/main/resources/schemas/MetajuegoSimple.xsd</source> -->
+<!--         </sources> -->
+<!--         <outputDirectory>${basedir}/src/main/java</outputDirectory> -->
+<!--         <clearOutputDir>true</clearOutputDir> -->
+<!--          <args> -->
+<!--                     <arg>-XtoString</arg> -->
+<!--                     <arg>-Xequals</arg> -->
+<!--                     <arg>-XhashCode</arg> -->
+<!--                     </args> -->
+<!--     </configuration> -->
+<!-- </plugin> -->
+<!-- </plugins> -->
 
-		</build>
+<!-- 		</build> -->
 </project>

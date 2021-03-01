@@ -119,7 +119,8 @@ public class MetajuegoService {
 	}
 
 	public Ambito getAmbitoMundial() {
-		return this.ambitoReporsitory.getOne(1);
+		Ambito ambito=this.ambitoReporsitory.getAmbitoByNombre("MUNDIAL");
+		return ambito;
 	}
 
 	public Fuente getFuenteWebScraping() {
@@ -148,17 +149,25 @@ public class MetajuegoService {
 		return proporcionRepository.getNextId();
 	}
 
-	public Metajuego getConsolidadoByAmbitoBetweenFechas(Ambito ambitoMundial, XMLGregorianCalendar fechaInicio,
-			XMLGregorianCalendar fechaFin) {
-				return metajuegoRepository.getConsolidadoByAmbitoBetweenFechas(ambitoMundial.getId(),fechaInicio.toGregorianCalendar().getTime(),
+	public Metajuego getConsolidadoByAmbitoBetweenFechas(Ambito ambito, XMLGregorianCalendar fechaInicio,
+			XMLGregorianCalendar fechaFin) throws Exception {
+		if(ambito!=null && fechaInicio!=null && fechaFin!=null) {
+				return metajuegoRepository.getConsolidadoByAmbitoBetweenFechas(ambito.getId(),fechaInicio.toGregorianCalendar().getTime(),
 						fechaFin.toGregorianCalendar().getTime());
-		// TODO Auto-generated method stub
+		}else if(ambito!=null && fechaInicio==null && fechaFin!=null){
+			return metajuegoRepository.getConsolidadoByAmbitoBeforeFecha(ambito.getId(),fechaFin.toGregorianCalendar().getTime());
+		}else if(ambito!=null && fechaInicio!=null && fechaFin==null) {
+			return metajuegoRepository.getConsolidadoByAmbitoAfterFecha(ambito.getId(),fechaInicio.toGregorianCalendar().getTime());
+		}else if(ambito!=null) {
+			return metajuegoRepository.getConsolidadoByAmbito(ambito.getId());
+		}else {
+			throw new Exception("intenta buscar un metajuego sin ambito");
+		}
 		
 	}
 
 	public List<Arquetipo> getArquetipoByMetajuego(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return arquetipoRepository.getByMetajuegoId(id);
 	}
 
 	public int getNextIdArquetipoMetajuego() {

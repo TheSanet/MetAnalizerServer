@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.02.26 a las 02:27:32 PM CET 
+// Generado el: 2021.02.28 a las 09:23:27 PM CET 
 //
 
 
-package com.jsanz.metanalizer.ws.entity;
+package com.jsanz.metanalizer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
- *                   &lt;element name="key" type="{http://metanalizer.jsanz.com/ws/entity}simplestArquetipo" minOccurs="0"/&gt;
+ *                   &lt;element name="key" type="{http://metanalizer.jsanz.com}simplestArquetipo" minOccurs="0"/&gt;
  *                   &lt;element name="value" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
@@ -93,7 +93,7 @@ public class SimplestMetajuego {
      *   &lt;complexContent&gt;
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *       &lt;sequence&gt;
-     *         &lt;element name="key" type="{http://metanalizer.jsanz.com/ws/entity}simplestArquetipo" minOccurs="0"/&gt;
+     *         &lt;element name="key" type="{http://metanalizer.jsanz.com}simplestArquetipo" minOccurs="0"/&gt;
      *         &lt;element name="value" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;

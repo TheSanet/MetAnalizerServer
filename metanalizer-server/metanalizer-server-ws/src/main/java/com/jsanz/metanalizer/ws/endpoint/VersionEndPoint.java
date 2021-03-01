@@ -21,7 +21,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class VersionEndPoint {
 
-	private static final String GET_TARGET_NAMESPACE = "http://metanalizer.jsanz.com/version";
+	private static final String GET_TARGET_NAMESPACE = "http://metanalizer.jsanz.com";
 
 	private final Logger logger = LoggerFactory.getLogger(VersionEndPoint.class);
 	

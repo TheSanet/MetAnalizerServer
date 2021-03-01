@@ -18,6 +18,15 @@ public interface MetajuegoRepository extends JpaRepository<Metajuego, Integer>{
 	@Query("select m from Metajuego m where m.ambito.id=:idAmbito and m.consolidado=1 and m.fechaDesde>:inicio and m.fechaHasta<:fin")
 	public Metajuego getConsolidadoByAmbitoBetweenFechas(@Param("idAmbito") Integer idAmbito, @Param("inicio") Date inicio, @Param("fin") Date fin);
 
+	@Query("select m from Metajuego m where m.ambito.id=:idAmbito and m.consolidado=1 and m.fechaDesde>:inicio ")
+	public Metajuego getConsolidadoByAmbitoBeforeFecha(@Param("idAmbito") Integer idAmbito,@Param("inicio") Date inicio);
+
+	@Query("select m from Metajuego m where m.ambito.id=:idAmbito and m.consolidado=1 and m.fechaHasta<:fin")
+	public Metajuego getConsolidadoByAmbitoAfterFecha(@Param("idAmbito") Integer idAmbito, @Param("fin") Date fin);
+
+	@Query("select m from Metajuego m where m.ambito.id=:idAmbito and m.consolidado=1")
+	public Metajuego getConsolidadoByAmbito(@Param("idAmbito") Integer idAmbito);
+
 
 	
 	

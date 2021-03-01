@@ -2,15 +2,16 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.02.26 a las 02:27:32 PM CET 
+// Generado el: 2021.02.28 a las 09:23:27 PM CET 
 //
 
 
-package com.jsanz.metanalizer.ws.entity;
+package com.jsanz.metanalizer;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -26,7 +27,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="formato" type="{http://metanalizer.jsanz.com/ws/entity}format"/&gt;
+ *         &lt;element name="formato" type="{http://metanalizer.jsanz.com}format"/&gt;
  *         &lt;element name="fecha-inicio" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="fecha-fin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *       &lt;/sequence&gt;
@@ -37,6 +38,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * 
  */
+@XmlRootElement(name = "ConsultaSimpleRequest", namespace = "http://metanalizer.jsanz.com")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConsultaSimpleRequest", propOrder = {
     "formato",
@@ -45,12 +47,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ConsultaSimpleRequest {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://metanalizer.jsanz.com", required = true)
     protected Format formato;
-    @XmlElement(name = "fecha-inicio", required = true, nillable = true)
+    @XmlElement(name = "fecha-inicio", namespace = "http://metanalizer.jsanz.com", required = true, nillable = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fechaInicio;
-    @XmlElement(name = "fecha-fin", required = true, nillable = true)
+    @XmlElement(name = "fecha-fin", namespace = "http://metanalizer.jsanz.com", required = true, nillable = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar fechaFin;
 
